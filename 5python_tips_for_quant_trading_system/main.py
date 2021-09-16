@@ -1,8 +1,7 @@
 import datetime as dt
 from datetime import timedelta
+
 import pandas as pd
-import pytz
-import math
 
 
 def get_prev_tstamp(itvl, curr_dt):
@@ -59,7 +58,6 @@ df5
 curr_dt = dt.datetime(2021, 9, 15, 13, 25, 4)
 
 
-
 def get_date_range():
     holidays = []
     curr_dt = dt.datetime(2021, 9, 15, 13, 0, 0)
@@ -75,3 +73,7 @@ def get_date_range():
     df = df[df['Time'] <= dt.time(hour=16, minute=0)]
     tstamp_range = df.index.copy()
     return tstamp_range
+
+
+df = pd.read_csv('Case3HistoricalPrices.csv', index_col=0)  # set the first col is index
+print(df.head())
