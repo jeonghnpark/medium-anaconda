@@ -9,6 +9,10 @@ df = pd.read_csv('Case3HistoricalPrices.csv', index_col=0)  # set the first col 
 print(df.head())
 df.columns
 
+df.columns
+df.columns
+print(4)
+
 
 # df.columns[0]
 # df['S1'].shift(1)
